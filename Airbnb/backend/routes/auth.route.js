@@ -5,4 +5,7 @@ const authRouter = express.Router()
 
 authRouter.post("/signup",signUp)
 authRouter.post("/login",login)
+authRouter.post('/logout', (req, res) => {
+  res.status(200).json({ message: 'Logged out successfully' });
+});
 export default  authRouter
